@@ -1,0 +1,24 @@
+
+Model Info
+
+  FMI Version       2.0
+  FMI Type          Model Exchange
+  Model Name        FMU_TEST
+  Description       None
+  Platforms         c-code, linux64, win32, win64
+  Continuous States 0
+  Event Indicators  0
+  Variables         9
+  Generation Tool   Dymola Version 2020x (64-bit), 2019-10-10
+  Generation Date   2020-09-09T06:23:23Z
+
+Default Experiment
+
+  Stop Time         1
+  Tolerance         0.0001
+
+Variables (input, output)
+
+Name                Causality              Start Value  Unit     Description
+u                   input                          0.0           
+y                   output                                       
