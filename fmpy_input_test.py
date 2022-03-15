@@ -17,7 +17,7 @@ repllist=[]
 ndellist=[]
 finallist=[]
 
-with open("fmu_info.txt","r",encoding="utf-8") as t:
+with open("./fmu_info.txt","r",encoding="utf-8") as t:
     for i in range(0,24):
         line=t.readline()
         infolist.append(line)
@@ -30,7 +30,6 @@ for j in range(len(infolist)):
 del ndellist[0]
 del ndellist[3:11]
 del ndellist[5:7]
-#print(ndellist)
 
 delversion="FMIVersion"
 deltype="FMIType"
@@ -48,7 +47,6 @@ finallist.append(ndellist[4].replace(deltol,""))
 finallist.append(ndellist[5].replace(delinput,""))
 finallist.append(ndellist[6].replace(repoutput,""))
 
-#print(finallist)
 fmiversion=finallist[0]
 fmitype=finallist[1]
 fmu=finallist[2]+".fmu"
@@ -64,7 +62,7 @@ def testfunction(fmi_version,
                  fmi_logging=False,
                  show_plot=True):
     
-    input=np.genfromtxt("input.csv",delimiter=",",names=True)
+    input=np.genfromtxt("./input.csv",delimiter=",",names=True)
     result=fm.simulate_fmu(
         filename=fmu,
         validate=False,
@@ -84,13 +82,14 @@ def testfunction(fmi_version,
                     events=events,
                     filename="./result.png")
    
-    with open("output.csv","w",encoding="utf-8") as o:
-        #print(result)
+    with open("./output.csv","w",encoding="utf-8",newline="") as o:
         wr=csv.writer(o)
+        wr.writerow(["time","y"])
         wr.writerows(result)    
     
     return result
 
 if __name__=="__main__":
     testfunction(fmiversion,fmitype)
+    print("Done")
     
