@@ -1,0 +1,42 @@
+ - Python3 연습 과제
+  - 4-1 Python3 XML Classification
+  - fminfo_make.py
+   
+ - 사용 라이브러리 
+  - sys
+  - fmpy
+ 
+ - 코드 설명  
+  - fmu 파일의 정보를 읽어 파일화하는 코드
+
+ - 동작 결과
+  - fmu_info.txt
+  -----파일 내용-----
+  
+        Model Info
+
+          FMI Version        2.0
+          FMI Type           Model Exchange
+          Model Name         FMU_TEST
+          Description        None
+          Platforms          c-code, win32, win64
+          Continuous States  0
+          Event Indicators   0
+          Variables          9
+          Generation Tool    Dymola Version 2020x (64-bit), 2019-10-10
+          Generation Date    2020-09-09T06:23:23Z
+
+        Default Experiment
+
+          Stop Time          1.0
+          Tolerance          0.0001
+
+        Variables (input, output)
+
+          Name               Causality              Start Value  Unit     Description
+          u                  input                          0.0           
+          y                  output                                        
+   ------------------
+
+   # Dymola 없이 FMU 파일의 속성 및 정보를 저장하여 확인할 수 있음
+   # fmpy_input_test.py 에서 Dymola 없이 시뮬레이션 가능하게 하기 위해 Python에서 내부를 읽을 수 있게 txt 파일에 정보 저장
