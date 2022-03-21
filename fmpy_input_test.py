@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 15 16:13:52 2020
-
-@author: 박종민
-"""
 from __future__ import print_function
 import csv
 import numpy as np
