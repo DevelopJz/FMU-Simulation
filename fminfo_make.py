@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 16 11:20:55 2020
-
-@author: 박종민
-"""
 import sys
 import fmpy as fm
 
