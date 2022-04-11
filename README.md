@@ -29,3 +29,6 @@ python -m pip install 라이브러리명
 **fmpy_input_test.py**  
 fmuinfo_make.py 로 만든 fmu_info.txt파일을 읽어 FMU 파일에 input.csv 파일을 넣고 시뮬레이션 하여 output.csv 파일 출력  
 시뮬레이션 결과 그래프 저장  
+
+**result**  
+![image](https://user-images.githubusercontent.com/96412126/162850569-2648e680-288f-430d-93d5-d331c53ecd99.png)
